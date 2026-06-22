@@ -5,9 +5,11 @@ const i18n = {
   en: {
     "meta.title": "VIEVOT | A Reasoning-First AI Brain",
     "meta.description": "VIEVOT is a reasoning-first AI brain for an ecosystem of focused AI apps and skills.",
+    "brand.tagline": "Reasoning-First AI",
     "nav.aria": "VIEVOT navigation",
     "nav.primaryAria": "Primary navigation",
     "nav.home": "Home",
+    "nav.chat": "Chat with VIEVOT",
     "nav.about": "About VIEVOT",
     "nav.vieracore": "VieraCore",
     "nav.beta": "Beta Access",
@@ -103,6 +105,7 @@ const i18n = {
     "contact.cta": "Contact VIEVOT",
     "statusPanel.title": "Access status",
     "statusPanel.body": "Choose API, Download, or Login to see the current beta access note.",
+    "statusPanel.chat": "VIEVOT Chat is opening for controlled beta access.",
     "statusPanel.beta": "Beta requests are not submitted to a backend yet. Use Request by email so you know exactly what is sent.",
     "statusPanel.api": "Public API access is coming soon. Request beta access if you want early review.",
     "statusPanel.download": "Beta download is coming soon. No public installer is available yet.",
@@ -121,9 +124,11 @@ const i18n = {
   vi: {
     "meta.title": "VIEVOT | Bộ não AI ưu tiên suy luận",
     "meta.description": "VIEVOT là bộ não AI ưu tiên suy luận cho hệ sinh thái ứng dụng và kỹ năng AI chuyên dụng.",
+    "brand.tagline": "AI ưu tiên suy luận",
     "nav.aria": "Điều hướng VIEVOT",
     "nav.primaryAria": "Điều hướng chính",
     "nav.home": "Trang chủ",
+    "nav.chat": "Trò chuyện với VIEVOT",
     "nav.about": "Về VIEVOT",
     "nav.vieracore": "VieraCore",
     "nav.beta": "Beta Access",
@@ -205,13 +210,13 @@ const i18n = {
     "beta.emailCta": "Gửi bằng email",
     "api.title": "API",
     "api.body": "Public API chưa mở. API beta sẽ được xem xét theo từng use case.",
-    "api.cta": "API access coming soon",
+    "api.cta": "API sắp mở",
     "download.title": "Tải ứng dụng",
     "download.body": "Installer public chưa sẵn sàng. Quyền tải ứng dụng sẽ mở trong controlled beta.",
-    "download.cta": "Beta download coming soon",
+    "download.cta": "Bản tải beta sắp mở",
     "login.title": "Đăng nhập",
-    "login.body": "OAuth public chưa được bật trên website này. Beta login sẽ dùng tài khoản VIEVOT được cấp quyền.",
-    "login.cta": "Beta login coming soon",
+    "login.body": "OAuth public chưa được bật trên website này. Đăng nhập beta sẽ dùng tài khoản VIEVOT được cấp quyền.",
+    "login.cta": "Đăng nhập beta sắp mở",
     "privacy.title": "Học tập ưu tiên quyền riêng tư",
     "privacy.body": "Không train trên hội thoại thô. Bài học được làm sạch và chuyển thành quy luật đã kiểm chứng. Dữ liệu nhạy cảm bị loại khỏi bộ nhớ tiến hóa dài hạn.",
     "contact.title": "Liên hệ",
@@ -219,10 +224,11 @@ const i18n = {
     "contact.cta": "Liên hệ VIEVOT",
     "statusPanel.title": "Trạng thái truy cập",
     "statusPanel.body": "Chọn API, Download hoặc Login để xem ghi chú beta hiện tại.",
+    "statusPanel.chat": "VIEVOT Chat đang mở theo quyền beta có kiểm soát.",
     "statusPanel.beta": "Yêu cầu beta chưa được gửi vào backend. Hãy dùng Gửi bằng email để bạn biết chính xác nội dung sẽ được gửi.",
     "statusPanel.api": "Public API đang được chuẩn bị. Hãy request beta access nếu bạn muốn được xem xét sớm.",
-    "statusPanel.download": "Beta download đang được chuẩn bị. Chưa có public installer.",
-    "statusPanel.login": "Public login đang được chuẩn bị. Beta login sẽ dùng tài khoản VIEVOT được cấp quyền.",
+    "statusPanel.download": "Bản tải beta đang được chuẩn bị. Chưa có public installer.",
+    "statusPanel.login": "Public login đang được chuẩn bị. Đăng nhập beta sẽ dùng tài khoản VIEVOT được cấp quyền.",
     "faq.pill": "FAQ",
     "faq.title": "Một vài ghi chú thực tế trước beta.",
     "faq.q1": "VIEVOT có chỉ là chat app không?",
@@ -303,6 +309,14 @@ function wireConfigLinks(config) {
   document.querySelectorAll("[data-app-link]").forEach((link) => {
     link.href = webChatUrl || "#beta-access";
     if (!webChatUrl) link.dataset.statusAction = "beta";
+  });
+  document.querySelectorAll("[data-chat-link]").forEach((link) => {
+    link.href = webChatUrl || "#beta-access";
+    if (webChatUrl) {
+      delete link.dataset.statusAction;
+    } else {
+      link.dataset.statusAction = "chat";
+    }
   });
   document.querySelectorAll("[data-contact-link]").forEach((link) => {
     if (contactUrl.startsWith("mailto:") || publicUrl(contactUrl)) link.href = contactUrl;

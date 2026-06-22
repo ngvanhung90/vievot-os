@@ -1,6 +1,7 @@
 {
   "publicBaseUrl": "https://vievot.com",
-  "webChatUrl": "",
+  "webChatUrl": "https://chat.vievot.com",
+  "chatStatus": "planned_public_subdomain",
   "betaAccessMode": "email",
   "apiDocsUrl": "",
   "downloadUrl": "",
