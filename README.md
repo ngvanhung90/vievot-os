@@ -1,36 +1,24 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# VIEVOT Website
 
-## Getting Started
+Public website source for the VIEVOT landing page.
 
-First, run the development server:
+## Build
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run website:build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The GitHub Pages workflow builds the static website and publishes the generated website output through GitHub Pages.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Deployment
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Custom domain: `vievot.com`
+- Deployment target: GitHub Pages
+- DNS provider: GoDaddy
+- HTTPS should be enforced after GitHub Pages finishes certificate provisioning.
 
-## Learn More
+## Safety
 
-To learn more about Next.js, take a look at the following resources:
+This repository branch is intended for public website deployment only.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Do not commit runtime storage, private logs, local session data, credentials, API keys, tokens, database files, or internal reports.

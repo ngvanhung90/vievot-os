@@ -1,53 +1,28 @@
 {
-  "name": "vierasales-desktop",
+  "name": "vievot-product",
   "version": "0.1.0",
   "private": true,
-  "main": "electron/main.js",
+  "description": "VIEVOT product apps",
   "scripts": {
-    "dev": "next dev",
-    "desktop:dev": "concurrently \"next dev\" \"wait-on http://localhost:3000 && cross-env VIERASALES_RENDERER_URL=http://localhost:3000 electron .\"",
-    "build": "next build",
-    "start": "next start",
-    "desktop:start": "cross-env VIERASALES_RENDERER_URL=http://localhost:3000 electron .",
-    "lint": "eslint",
-    "dist": "npm run build && electron-builder"
+    "web": "node apps/web/server.js",
+    "website": "node apps/website/server.js",
+    "website:build": "node apps/website/build.js",
+    "website:smoke": "node scripts/runVievotWebsiteD150.js",
+    "website:redesign:smoke": "node scripts/runVievotWebsiteRedesignD150C.js",
+    "performance:audit": "node scripts/runVievotPerformanceAuditD150B.js",
+    "latency:attribution": "node scripts/runVievotRuntimeLatencyAttributionD151.js",
+    "brain:latency:audit": "node scripts/runVievotBrainResolverLatencyAuditD152.js",
+    "external-fallback:remove:audit": "node scripts/runVievotRemoveExternalAiFallbackD153B.js",
+    "continuation:smoke": "node scripts/runVievotContinuationResolverD155A.js",
+    "official-route:smoke": "node scripts/runVievotOfficialRouteD155A2.js",
+    "desktop": "node apps/desktop/src/main.js",
+    "desktop:check": "node apps/desktop/src/main.js --check",
+    "smoke": "node scripts/runVievotProductSmokeTest.js"
+  },
+  "optionalDependencies": {
+    "electron": "^37.0.0"
   },
   "dependencies": {
-    "better-sqlite3": "^12.5.0",
-    "next": "16.2.4",
-    "react": "19.2.4",
-    "react-dom": "19.2.4"
-  },
-  "devDependencies": {
-    "@tailwindcss/postcss": "^4",
-    "@types/better-sqlite3": "^7.6.13",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "concurrently": "^9.2.1",
-    "cross-env": "^10.1.0",
-    "electron": "^39.2.7",
-    "electron-builder": "^26.0.12",
-    "eslint": "^9",
-    "eslint-config-next": "16.2.4",
-    "tailwindcss": "^4",
-    "typescript": "^5",
-    "wait-on": "^9.0.3"
-  },
-  "build": {
-    "appId": "com.vierasales.desktop",
-    "productName": "VieraSales Desktop",
-    "files": [
-      "electron/**/*",
-      ".next/**/*",
-      "app/**/*",
-      "components/**/*",
-      "lib/**/*",
-      "package.json",
-      "next.config.ts"
-    ],
-    "directories": {
-      "output": "dist"
-    }
+    "better-sqlite3": "^12.10.0"
   }
 }
