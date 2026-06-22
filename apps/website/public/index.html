@@ -32,14 +32,14 @@
       </a>
 
       <nav class="nav-list" aria-label="Primary navigation" data-i18n-attr="aria-label:nav.primaryAria">
-        <a class="active" href="#home"><span>*</span><span data-i18n="nav.home">Home</span></a>
-        <a data-chat-link href="#beta-access"><span>@</span><span data-i18n="nav.chat">Chat with VIEVOT</span></a>
-        <a href="#about"><span>i</span><span data-i18n="nav.about">About VIEVOT</span></a>
-        <a href="#vieracore"><span>&lt;/&gt;</span><span data-i18n="nav.vieracore">VieraCore</span></a>
-        <a href="#beta-access"><span>+</span><span data-i18n="nav.beta">Beta Access</span></a>
-        <a href="#api"><span>{}</span><span data-i18n="nav.api">API</span></a>
-        <a href="#download"><span>v</span><span data-i18n="nav.download">Download</span></a>
-        <a href="#login"><span>[]</span><span data-i18n="nav.login">Login</span></a>
+        <a class="active" href="#home"><span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 11.5 12 5l8 6.5V20h-5v-5H9v5H4z" /></svg></span><span data-i18n="nav.home">Home</span></a>
+        <a data-chat-link href="#beta-access"><span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 6h14v9H9l-4 4z" /></svg></span><span data-i18n="nav.chat">Chat with VIEVOT</span></a>
+        <a href="#about"><span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 7h.01M11 11h2v6h-2z" /><circle cx="12" cy="12" r="9" /></svg></span><span data-i18n="nav.about">About VIEVOT</span></a>
+        <a href="#vieracore"><span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 7h8M7 12h10M9 17h6" /></svg></span><span data-i18n="nav.vieracore">VieraCore</span></a>
+        <a href="#beta-access"><span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" /></svg></span><span data-i18n="nav.beta">Beta Access</span></a>
+        <a href="#api"><span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 8 4 12l4 4M16 8l4 4-4 4M14 5l-4 14" /></svg></span><span data-i18n="nav.api">API</span></a>
+        <a href="#download"><span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 4v11M8 11l4 4 4-4M5 20h14" /></svg></span><span data-i18n="nav.download">Download</span></a>
+        <a href="#login"><span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M10 7a4 4 0 1 0 4 4M14 7h6v6M20 7l-8 8" /></svg></span><span data-i18n="nav.login">Login</span></a>
       </nav>
 
       <div class="language-box">
@@ -57,7 +57,7 @@
     <main class="page">
       <header class="topbar">
         <a class="login-button" href="#login" aria-label="Login" data-i18n-attr="aria-label:nav.login">
-          [] <span data-i18n="nav.login">Login</span>
+          <span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M10 7a4 4 0 1 0 4 4M14 7h6v6M20 7l-8 8" /></svg></span><span data-i18n="nav.login">Login</span>
         </a>
       </header>
 
@@ -112,7 +112,7 @@
 
       <section class="stats-strip" id="performance" aria-label="Performance notes" data-i18n-attr="aria-label:performance.aria">
         <article>
-          <strong>100-200ms</strong>
+          <strong data-i18n="performance.latencyValue">~0.15s</strong>
           <span data-i18n="performance.latency">Typical response latency</span>
         </article>
         <article>
@@ -131,7 +131,7 @@
           <strong data-i18n="performance.contextMetric">Long context</strong>
           <span data-i18n="performance.context">consistency</span>
         </article>
-        <p data-i18n="performance.note">Measured internally. June 2026. 1,000 prompts.</p>
+        <p data-i18n="performance.note">Internally measured in June 2026 with 1,000 real prompts.</p>
       </section>
 
       <section class="split-band" id="about">
@@ -186,7 +186,7 @@
       <section class="feature-section app-section" id="apps">
         <div class="section-heading">
           <p class="pill" data-i18n="apps.pill">PRODUCTS & SKILLS</p>
-          <h2 data-i18n="apps.title">Public focus: VIEVOT and VieraCore first.</h2>
+          <h2 data-i18n="apps.title">VIEVOT starts with two focused products.</h2>
         </div>
         <div class="app-grid">
           <article class="app-card">
@@ -273,8 +273,10 @@
         </article>
         <article class="access-card" id="contact">
           <h3 data-i18n="contact.title">Contact</h3>
-          <p data-i18n="contact.body">For beta access, product questions, or partnership conversations, contact the VIEVOT team.</p>
-          <a class="button ghost" data-contact-link href="mailto:founder@vievot.com?subject=VIEVOT%20inquiry" data-i18n="contact.cta">Contact VIEVOT</a>
+          <p data-i18n="contact.body">For general questions, beta access, or partnerships, contact the VIEVOT team.</p>
+          <p class="contact-email"><a data-contact-link href="mailto:contact@vievot.com">contact@vievot.com</a></p>
+          <p class="contact-note" data-i18n="contact.note">Email contact is being provisioned.</p>
+          <a class="button ghost" data-contact-link href="mailto:contact@vievot.com?subject=VIEVOT%20inquiry" data-i18n="contact.cta">Contact VIEVOT</a>
         </article>
       </section>
 

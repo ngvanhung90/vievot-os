@@ -6,7 +6,10 @@
   "apiDocsUrl": "",
   "downloadUrl": "",
   "loginUrl": "",
-  "contactUrl": "mailto:founder@vievot.com",
+  "contactUrl": "mailto:contact@vievot.com",
+  "contactEmail": "contact@vievot.com",
+  "betaEmail": "beta@vievot.com",
+  "investorEmail": "investor@vievot.com",
   "environment": "staging",
   "deploymentTrigger": "pages-enabled-2026-06-22"
 }
