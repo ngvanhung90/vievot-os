@@ -15,6 +15,16 @@ Source app found in the VIEVOT workspace:
 - Chat API dependency: gateway route `/vievot-chat`
 - Skill API dependency: local route `/api/skills/process`
 
+## Landing Page Link Status
+
+The public landing page now links the sidebar chat entry directly to:
+
+https://chat.vievot.com
+
+This is an intentional real URL, not a fake in-page fallback. If `chat.vievot.com` has not been deployed or pointed in DNS yet, the browser should show the real DNS/hosting error until the chat app is deployed.
+
+Do not claim that VIEVOT Chat is live until `chat.vievot.com` resolves over HTTPS and the web chat app is actually deployed.
+
 ## Can chat.vievot.com Use GitHub Pages?
 
 Not as the full chat app.
