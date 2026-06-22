@@ -6,5 +6,6 @@
   "downloadUrl": "",
   "loginUrl": "",
   "contactUrl": "mailto:founder@vievot.com",
-  "environment": "staging"
+  "environment": "staging",
+  "deploymentTrigger": "pages-enabled-2026-06-22"
 }
