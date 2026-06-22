@@ -1,0 +1,10 @@
+{
+  "publicBaseUrl": "https://vievot.com",
+  "webChatUrl": "https://app.vievot.com",
+  "betaAccessMode": "email",
+  "apiDocsUrl": "https://vievot.com/api",
+  "downloadUrl": "",
+  "loginUrl": "https://app.vievot.com/login",
+  "contactUrl": "mailto:founder@vievot.com",
+  "environment": "staging"
+}
