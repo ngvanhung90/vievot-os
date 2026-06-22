@@ -73,11 +73,12 @@ for (const fragment of bannedViFragments) {
   if (viText.includes(fragment)) fail("Vietnamese mode contains English fragment", fragment);
 }
 
-if (!index.includes("data-chat-link") || !i18n.en["nav.chat"] || !i18n.vi["nav.chat"]) {
+if (!index.includes("data-chat-link") || !i18n.en.navVievotChat || !i18n.vi.navVievotChat) {
   fail("Sidebar chat entry is missing");
 }
-if (i18n.en["nav.chat"] !== "Chat with VIEVOT") fail("English chat label mismatch", i18n.en["nav.chat"]);
-if (i18n.vi["nav.chat"] !== "Trò chuyện với VIEVOT") fail("Vietnamese chat label mismatch", i18n.vi["nav.chat"]);
+const chatKey = "navVievotChat";
+if (i18n.en[chatKey] !== "VIEVOT Chat") fail("English chat label mismatch", i18n.en[chatKey]);
+if (i18n.vi[chatKey] !== "Trò chuyện với VIEVOT") fail("Vietnamese chat label mismatch", i18n.vi[chatKey]);
 
 if (config.webChatUrl !== "https://chat.vievot.com") fail("webChatUrl is not chat.vievot.com", config.webChatUrl);
 if (config.chatStatus !== "planned_public_subdomain") fail("chatStatus missing or incorrect", config.chatStatus);

@@ -41,7 +41,7 @@ if (index.includes("<span>*</span>") || index.includes("<span>@</span>") || inde
   fail("Raw sidebar icon spans remain");
 }
 
-if (!publicText.includes("Chat with VIEVOT")) fail("English chat label missing");
+if (!publicText.includes("VIEVOT Chat")) fail("English chat label missing");
 if (!publicText.includes("Trò chuyện với VIEVOT")) fail("Vietnamese chat label missing");
 if (config.webChatUrl !== "https://chat.vievot.com") fail("webChatUrl is not exact chat URL", config.webChatUrl);
 if (!index.includes('href="https://chat.vievot.com"')) fail("Chat anchor does not directly target chat.vievot.com");

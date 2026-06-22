@@ -25,6 +25,8 @@ This is an intentional real URL, not a fake in-page fallback. If `chat.vievot.co
 
 Do not claim that VIEVOT Chat is live until `chat.vievot.com` resolves over HTTPS and the web chat app is actually deployed.
 
+As of this plan update, `chat.vievot.com` does not resolve in DNS from the deployment machine. The landing page link is correct, but the chat service is not live yet.
+
 ## Can chat.vievot.com Use GitHub Pages?
 
 Not as the full chat app.
@@ -58,6 +60,14 @@ For `chat.vievot.com`:
 - If using a VM/load balancer: create `A` or `AAAA` record to the assigned endpoint.
 - Enable HTTPS certificate for `chat.vievot.com`.
 - Do not point `chat.vievot.com` to GitHub Pages unless the chat is converted to a fully static app.
+
+If using GitHub Pages for a future static-only chat frontend:
+
+- Record type: `CNAME`
+- Name: `chat`
+- Value: `ngvanhung90.github.io`
+
+This is not sufficient for the current Node-backed chat app because the current app needs server routes and a public gateway.
 
 ## Required Runtime Environment
 
